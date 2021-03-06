@@ -1,5 +1,6 @@
 ﻿using ADSG.Foundation.Framework.Logging;
 using Microsoft.Extensions.DependencyInjection;
+using Sitecore.Abstractions;
 using Sitecore.DependencyInjection;
 
 namespace ADSG.Website
@@ -8,7 +9,7 @@ namespace ADSG.Website
     {
         public void Configure(IServiceCollection serviceCollection)
         {
-            serviceCollection.AddSingleton(typeof(ILogger), typeof(Logger));
+            serviceCollection.AddSingleton(typeof(BaseLog), typeof(Logger));
         }
     }
 }

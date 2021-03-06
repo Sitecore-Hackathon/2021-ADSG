@@ -1,5 +1,5 @@
-﻿using Sitecore;
-using Sitecore.Configuration;
+﻿using Sitecore.Configuration;
+using Sitecore.Data;
 using Sitecore.Data.Items;
 using Sitecore.Links;
 using Sitecore.Links.UrlBuilders;
@@ -7,15 +7,14 @@ using Sitecore.Sites;
 using System;
 using System.Linq;
 
-namespace ADSG.Feature.StructuredData.Extensions
+namespace ADSG.Foundation.Framework.Extensions
 {
     public static partial class ItemExtensions
     {
-        public static string GetUrl(this Item item, LinkProvider linkProvider, ItemUrlBuilderOptions urlBuilderOptions)
+        public static string GetIndexableLink(this Item item, LinkProvider linkProvider, ItemUrlBuilderOptions urlBuilderOptions)
         {
-            if (item.HasPresentationDetails())
+            if (item.IsShortLivedContent())
             {
-                //Ensure that the targetHostName attribute of Site Definition is set to host name of Content Delivery instance
                 using (new SiteContextSwitcher(item.GetSiteContext()))
                 {
                     return linkProvider.GetItemUrl(item, urlBuilderOptions);
@@ -39,12 +38,17 @@ namespace ADSG.Feature.StructuredData.Extensions
             return null;
         }
 
-        public static bool HasPresentationDetails(this Item item)
+        public static bool IsShortLivedContent(this Item item)
         {
             if (item != null)
             {
-                return item.Fields[FieldIDs.LayoutField] != null
-                        && !string.IsNullOrEmpty(item.Fields[FieldIDs.LayoutField].Value);
+                DeviceRecords devices = item.Database.Resources.Devices;
+                DeviceItem defaultDevice = devices.GetAll().Where(d => d.Name.ToLower() == "default").First();
+
+                return item.Visualization.GetRenderings(defaultDevice, false).Any(r =>
+                    r.RenderingID.ToString().Equals(Constants.StructuredDataRenderingsIDs.VideoBroadcastEventRenderingID) ||
+                    r.RenderingID.ToString().Equals(Constants.StructuredDataRenderingsIDs.JobPostingRenderingID)
+                );
             }
             return false;
         }

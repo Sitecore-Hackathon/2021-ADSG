@@ -1,4 +1,5 @@
-﻿using Sitecore.Configuration;
+﻿using ADSG.Foundation.Framework.Extensions;
+using Sitecore.Configuration;
 using Sitecore.Data;
 using Sitecore.Data.Items;
 using Sitecore.Diagnostics;
@@ -10,7 +11,6 @@ using System.Linq;
 
 namespace ADSG.Feature.StructuredData.Pipelines
 {
-    using Extensions;
     using Helpers;
 
     class IndexPublishedContentProcessor : PublishProcessor
@@ -42,10 +42,8 @@ namespace ADSG.Feature.StructuredData.Pipelines
             var urlOptions = new ItemUrlBuilderOptions() { AlwaysIncludeServerUrl = true };
             foreach (var itemID in processedItemIDs)
             {
-                //Add condition(s) to include only Templates that hold short-lived content. Eg: Events, Job Posting
-                //Ensure that the respective pages follow Google Structured Data Standards (https://developers.google.com/search/docs/data-types/video#broadcast-event , https://developers.google.com/search/docs/data-types/job-posting)
                 Item processedItem = context.PublishOptions.TargetDatabase.GetItem(itemID);
-                string processedItemLink = processedItem.GetUrl(_linkProvider, urlOptions);
+                string processedItemLink = processedItem.GetIndexableLink(_linkProvider, urlOptions);
                 if (!string.IsNullOrEmpty(processedItemLink))
                 {
                     modifiedLinks.Add(processedItemLink);

@@ -1,5 +1,6 @@
 # may contain OAuth secrets, do not commit
 .sitecore/user.json
+private-key.json
 
 # Ephemeral index caches used by serialization, do not commit
 .scindex

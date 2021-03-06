@@ -96,7 +96,8 @@
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Extensions\ItemExtensions.cs" />
     <Compile Include="Logging\Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

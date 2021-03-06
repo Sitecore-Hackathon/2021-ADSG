@@ -1,4 +1,5 @@
-﻿using Sitecore.Configuration;
+﻿using ADSG.Foundation.Framework.Extensions;
+using Sitecore.Configuration;
 using Sitecore.Data.Items;
 using Sitecore.Diagnostics;
 using Sitecore.Events;
@@ -8,7 +9,6 @@ using System;
 
 namespace ADSG.Feature.StructuredData.Events
 {
-    using Extensions;
     using Helpers;
 
     public class RemoveIndexedLinksHandler
@@ -32,10 +32,8 @@ namespace ADSG.Feature.StructuredData.Events
             if (item.Database.Name == "master")
                 return;
 
-            //Add condition(s) to include only Templates that hold short-lived content. Eg: Events, Job Posting
-            //Ensure that the respective pages follow Google Structured Data Standards (https://developers.google.com/search/docs/data-types/video#broadcast-event , https://developers.google.com/search/docs/data-types/job-posting)
             var urlOptions = new ItemUrlBuilderOptions() { AlwaysIncludeServerUrl = true };
-            var deletedLink = item.GetUrl(_linkProvider, urlOptions);
+            var deletedLink = item.GetIndexableLink(_linkProvider, urlOptions);
             if(!string.IsNullOrEmpty(deletedLink))
                 IndexingAPIHelper.SendIndexingRequest(deletedLink, "URL_DELETED");
         }

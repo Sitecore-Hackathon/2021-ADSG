@@ -16,8 +16,7 @@ namespace ADSG.Feature.StructuredData.Helpers
         public static IndexingService _googleIndexingApiClientService = GetGoogleIndexingAPIClientService();
         public static IndexingService GetGoogleIndexingAPIClientService()
         {
-            //Ensure to place the Private Key downloaded for the Google Service Account in the website root folder
-            //JSON filename shall be updated for security reasons
+            //Private Key retrieved for Google Service Account shall be used for authentication
             var privateKeyFilePath = HostingEnvironment.MapPath("/private-key.json");
             GoogleCredential credential;
             using (var stream = new FileStream(privateKeyFilePath, FileMode.Open, FileAccess.Read))

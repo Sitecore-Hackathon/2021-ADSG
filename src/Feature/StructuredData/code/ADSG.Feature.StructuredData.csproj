@@ -106,7 +106,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Events\RemoveIndexedLinksHandler.cs" />
-    <Compile Include="Extensions\ItemExtensions.cs" />
     <Compile Include="Helpers\IndexingAPIHelper.cs" />
     <Compile Include="Pipelines\IndexPublishedContentProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -120,6 +119,12 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\Framework\code\ADSG.Foundation.Framework.csproj">
+      <Project>{1ce39bf2-af1c-4cd2-9f75-c38f34e3902a}</Project>
+      <Name>ADSG.Foundation.Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
