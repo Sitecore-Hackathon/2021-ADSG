@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "future-pager-306118",
+  "private_key_id": "cdb2fea36215946e5db1e919c6a126012df556c0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChuKXUFLVaZByu\n8H768TcXhTCLsa/tLAJc/N74hhkjLXo6gI+NZqzd/hdTOKcUqHwJKxPyX94GS+xq\nwaaL9tyMw+rU9dSdxU1g/ftb4bOQZRDYossGVuA0G+zRWxXKEN1BEJkCsrUT4Q3L\nNK8Rz7RF/jX8bE2aAz91R/FJWGVqbtPnX/86rR1xAVtnnjY4WAhcxdwnCqBNywuE\nkfclBRVKxNXlwpXF13xV5Zwqm1r7VKyJD6f+2ozNdPn7tcKa5b8JARuU9/KoMWWO\nFu40oYw6rBl3pU8QNJ/L5XEZhxZDSVOy3qn1tU+bj4wsuzYIFBr9r5ou1QGijImQ\nCKrqkWN1AgMBAAECggEAHXnTN8GCgHQoyjXpXwGiIfZTr9J2F0tjLuGkHjYK1N+Q\nHKOcBpDFRzztsWxs/5Xp7Z3dZ9rTU+B4uciL+4zGDB4VajVYSF1Syi/gpZGQsevJ\n00JwsLoa6USBuHLamNbUDOzihpxd5r6pTfVPR3bNC8jWvChdSIn5Af5X2x9ydKBu\nK0Gfx/EpADZq7vqHsOTbFt15My10zvYqbDSxVCXKxQ0BnUorKe2OWlpp0dNA8d73\nixyiKizV1CnwtmN10lDsdERTkOKe8DbXL2/p6Umk95KNVJkI1bF+kwvTGrCWaWFT\nY8UJLW9Z19V/yUR9N9OG30hr0NqEbqQsG+bXrQV2oQKBgQDdrP+imM4e7zOThDwf\nZ36GgMXQYZItqN+7n9R0oook6fh2FlNOIJ5RQiq1z/8H8nqCandu2mMyYAhGOSLR\n63nQdWms++uyvdBAKknE5/o0tN6bC4rY8wSr4P+ntDD5NYZoxTfJrBZ/nLP645XK\nx7tFHI055oZo8jrhAUMmMji3GQKBgQC6wx08xdsdxIhh3ZC1uMUwxLEnrsgm8GFZ\nUMC8CRFebrvQmSc3nM6E0B5Wq/Ecz1/o90OQB7R/VSXJrXBS3jZQqinmHfvbuf3j\nT3Xy5t0ARSdsOUKHdT4XhnX0Ho32Q2kEaI2AlefH7u08OpaWr7X7xkY1IoQa3FOS\nOXQb5rimvQKBgFphDljctC0omX6ri1fCenOcTQqIvXCgSZfVsmlbW7dxLTv4Hj7c\nTbATqhY2l2RGGGzTu54WrBr9zGHVKb0spJ25QTyl+ZMGkMGYfDsr2Xdjxt6v9gw+\nCMmLErDtZoo0qHhO8E/pOcMNwNOptojWpiOnYG0a7/IZ0KesPBR2pWkBAoGAUl8G\nASzexJVO9aMMVSnmRukpnW/4NTxmI0d7ijORpo2+ZnV2F5AggfFswBtb37ITAiQ0\nd0z+rf53CSlm1hXN7OvwSN9GmxXARcZhJj3ukVTu20ux7R6nwSZ71ay4PjpjEh+u\n8VysesEFfz/z9QgQgrhjdMIBc/tjHKYccMXlAR0CgYA8ZlPcOynDBjwR+e8oZTma\naRVrYCT4pl6L+homeqiR0adwszxkZxEklWx2RuAa1/p/a/33JI1OA0Evc/sbA/qN\nDDdyp06L0v/ZskAoiQvnnaPA8aE8OuCj8rKxAikxlJY7JTEt6NRo1dzpX9EWtzmp\nFkzdWirReA4xDcFAvxYE3A==\n-----END PRIVATE KEY-----\n",
+  "client_email": "sitecore-google-indexing-api@future-pager-306118.iam.gserviceaccount.com",
+  "client_id": "109142351218680292808",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sitecore-google-indexing-api%40future-pager-306118.iam.gserviceaccount.com"
+}
